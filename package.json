@@ -1,0 +1,46 @@
+{
+  "name": "w3cypresstests",
+  "version": "1.0.0",
+  "description": "Cypress Tests for W3 website",
+  "main": "index.js",
+  "scripts": {
+    "build-cypress-image": "docker build -t cypress-docker .",
+    "build-deploy-test": "npm run build-cypress-image && npm run test:cross-platform && npm run posttest",
+    "pre-test": "rm -rf cypress/reports/*",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "combine-reports": "npx mochawesome-merge ./cypress/reports/firefox/mochawesome-report/.jsons/*.json ./cypress/reports/chrome/mochawesome-report/.jsons/*.json -o ./cypress/reports/combinedReport.json",
+    "posttest": "npm run combine-reports && npm run generate-report",
+    "scripts": "cypress run",
+    "scripts:chrome": "cypress run --browser chrome ",
+    "scripts:firefox": "cypress run --browser firefox ",
+    "test-development": "cypress open",
+    "test": "npm run scripts || npm run posttest",
+    "test:chrome": "npm run pre-test && docker-compose run cypress-chrome",
+    "test:firefox": "npm run pre-test && docker-compose run cypress-firefox",
+    "test:cross-platform": "npm run pre-test && docker-compose up && npm run post-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronarwithsonar/w3CypressTests.git"
+  },
+  "author": "Ronan Mc Laughlin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronarwithsonar/w3CypressTests/issues"
+  },
+  "homepage": "https://github.com/ronarwithsonar/w3CypressTests#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^12.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "cypress": "^10.6.0",
+    "cypress-fail-on-console-error": "^3.2.1",
+    "cypress-mochawesome-reporter": "^3.2.2",
+    "eslint": "^8.22.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "mochawesome-merge": "^4.2.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/stepDefinitions.{js,ts}"
+  }
+}

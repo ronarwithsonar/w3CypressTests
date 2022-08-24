@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  cypress-chrome:
+    image: "cypress-docker"
+    # command set in package.json
+    command: test:chrome
+    volumes:
+      - ./cypress/videos/chrome:/cypress-docker/cypress/videos
+      - ./cypress/reports/chrome:/cypress-docker/cypress/reports
+      - ./cypress:/cypress-docker/cypress
+
+  cypress-firefox:
+    image: "cypress-docker"
+    # command set in package.json
+    command: test:firefox
+    # environment:
+    #   - DEBUG=cypress:server:browsers:firefox-util,cypress:server:util:process_profiler
+    volumes:
+      - ./cypress/videos/firefox:/cypress-docker/cypress/videos
+      - ./cypress/reports/firefox:/cypress-docker/cypress/reports
+      - ./cypress:/cypress-docker/cypress

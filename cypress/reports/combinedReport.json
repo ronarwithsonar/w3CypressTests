@@ -1,0 +1,361 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-24T18:53:06.324Z",
+    "end": "2022-08-24T18:53:17.088Z",
+    "duration": 7371,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "222a870a-c3b0-43cf-a308-15eea87cb254",
+      "title": "",
+      "fullFile": "cypress/e2e/w3Tests.cy.js",
+      "file": "cypress/e2e/w3Tests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0955d152-8072-4d65-815b-04d38d80bfea",
+          "title": "It tests several pages on the W3 website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "58e8bc6f-b9f4-4026-826c-351697c183fa",
+              "title": "It tests the badpage page on the W3 website",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Checks there are no console errors on page load",
+                  "fullTitle": "It tests several pages on the W3 website It tests the badpage page on the W3 website Checks there are no console errors on page load",
+                  "timedOut": null,
+                  "duration": 2065,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "5ec7f238-2e04-465e-a9ae-2b24aa901b95",
+                  "parentUUID": "58e8bc6f-b9f4-4026-826c-351697c183fa",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5ec7f238-2e04-465e-a9ae-2b24aa901b95"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2065,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "0b4fd4dd-eccb-4a8f-8f67-4c63be743249",
+              "title": "It tests the webofdevices/multimodal page on the W3 website",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Checks there are no console errors on page load",
+                  "fullTitle": "It tests several pages on the W3 website It tests the webofdevices/multimodal page on the W3 website Checks there are no console errors on page load",
+                  "timedOut": null,
+                  "duration": 1038,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "305cf408-5a1e-4cac-8a1d-add9581422b3",
+                  "parentUUID": "0b4fd4dd-eccb-4a8f-8f67-4c63be743249",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "305cf408-5a1e-4cac-8a1d-add9581422b3"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1038,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "e6da7aaf-4492-45cf-9f16-7293028ed6f5",
+              "title": "It tests the webdesign/htmlcss page on the W3 website",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Checks there are no console errors on page load",
+                  "fullTitle": "It tests several pages on the W3 website It tests the webdesign/htmlcss page on the W3 website Checks there are no console errors on page load",
+                  "timedOut": null,
+                  "duration": 515,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "06528a2b-a961-4569-aea8-cff8c58bcefc",
+                  "parentUUID": "e6da7aaf-4492-45cf-9f16-7293028ed6f5",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "06528a2b-a961-4569-aea8-cff8c58bcefc"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 515,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6118ba06-3cbf-45b9-b440-e836dc728b42",
+      "title": "",
+      "fullFile": "cypress/e2e/w3Tests.cy.js",
+      "file": "cypress/e2e/w3Tests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1cbd7b12-06e6-4053-b5f6-26992fc07d14",
+          "title": "It tests several pages on the W3 website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "8529da3f-9f73-4b84-9d6d-35e4afcc5780",
+              "title": "It tests the badpage page on the W3 website",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Checks there are no console errors on page load",
+                  "fullTitle": "It tests several pages on the W3 website It tests the badpage page on the W3 website Checks there are no console errors on page load",
+                  "timedOut": null,
+                  "duration": 2041,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "a0910e9a-ade9-4e47-bf81-e34496cd8d0d",
+                  "parentUUID": "8529da3f-9f73-4b84-9d6d-35e4afcc5780",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a0910e9a-ade9-4e47-bf81-e34496cd8d0d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2041,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d69f3169-5fc1-4035-a969-f207503c1a60",
+              "title": "It tests the webofdevices/multimodal page on the W3 website",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Checks there are no console errors on page load",
+                  "fullTitle": "It tests several pages on the W3 website It tests the webofdevices/multimodal page on the W3 website Checks there are no console errors on page load",
+                  "timedOut": null,
+                  "duration": 815,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "90f37b39-06bb-4aaf-90f0-75085aed1a8c",
+                  "parentUUID": "d69f3169-5fc1-4035-a969-f207503c1a60",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "90f37b39-06bb-4aaf-90f0-75085aed1a8c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 815,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "207b91a8-66d6-46c0-85b3-fdcbb3a87782",
+              "title": "It tests the webdesign/htmlcss page on the W3 website",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Checks there are no console errors on page load",
+                  "fullTitle": "It tests several pages on the W3 website It tests the webdesign/htmlcss page on the W3 website Checks there are no console errors on page load",
+                  "timedOut": null,
+                  "duration": 897,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "aa56d1bf-c5b0-4259-99ae-2136f07b366d",
+                  "parentUUID": "207b91a8-66d6-46c0-85b3-fdcbb3a87782",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "aa56d1bf-c5b0-4259-99ae-2136f07b366d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 897,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "reportDir": "cypress/reports/mochawesome-report/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
