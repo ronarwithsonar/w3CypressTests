@@ -10,7 +10,13 @@ An exercise in using Cucumber, Cypress, Docker, and Docker-Compose to test again
 
 ## Installation
 
-Use the package manager [npm](https://nodejs.org/en/download/package-manager/) to build, deploy and execute the test suite.
+Use the package manager [npm](https://nodejs.org/en/download/package-manager/) to install dependencies
+
+```bash
+npm install
+```
+
+To build, deploy and execute the test suite:
 
 ```bash
 npm run build:deploy:test
