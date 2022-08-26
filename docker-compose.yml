@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   cypress-chrome:
-    image: "cypress-docker"
+    image: "cypress-container"
     # command set in package.json
     command: test:chrome
     volumes:
@@ -11,7 +11,7 @@ services:
       - ./cypress:/cypress-docker/cypress
 
   cypress-firefox:
-    image: "cypress-docker"
+    image: "cypress-container"
     # command set in package.json
     command: test:firefox
     # environment:

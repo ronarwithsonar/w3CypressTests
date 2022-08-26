@@ -1,7 +1,7 @@
 # update this version as required
 FROM cypress/included:10.6.0
-RUN mkdir /cypress-docker
-WORKDIR /cypress-docker
+RUN mkdir /cypress-container
+WORKDIR /cypress-container
 COPY ./.cypress-cucumber-preprocessorrc.json .
 COPY ./package.json .
 COPY ./package-lock.json .
