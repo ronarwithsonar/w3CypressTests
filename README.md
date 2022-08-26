@@ -46,5 +46,5 @@ npm run build:cypress:image-with-tests
 - `npm run test` - Runs tests on native machine and generates report 
 - `npm run test:chrome:docker` - Runs tests on Chrome via Docker and generates report
 - `npm run test:firefox:docker` - Runs tests on Firefox via Docker and generates report
-- `npm run test:cross-platform` - Runs tests on Chrome and Firefox in parralel via Docker and generates report
+- `npm run test:cross-platform` - Runs tests on Chrome and Firefox in parallel via Docker and generates report
 
