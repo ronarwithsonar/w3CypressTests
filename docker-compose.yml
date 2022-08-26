@@ -5,10 +5,10 @@ services:
     # command set in package.json
     command: test:chrome
     volumes:
-      - ./cypress/videos/chrome:/cypress-docker/cypress/videos
-      - ./cypress/screenshots/chrome:/cypress-docker/cypress/screenshots
-      - ./cypress/reports/chrome:/cypress-docker/cypress/reports
-      - ./cypress:/cypress-docker/cypress
+      - ./cypress/videos/chrome:/cypress-container/cypress/videos
+      - ./cypress/screenshots/chrome:/cypress-container/cypress/screenshots
+      - ./cypress/reports/chrome:/cypress-container/cypress/reports
+      - ./cypress:/cypress-container/cypress
 
   cypress-firefox:
     image: "cypress-container"
@@ -17,7 +17,7 @@ services:
     # environment:
     #   - DEBUG=cypress:server:browsers:firefox-util,cypress:server:util:process_profiler
     volumes:
-      - ./cypress/videos/firefox:/cypress-docker/cypress/videos
-      - ./cypress/screenshots/firefox:/cypress-docker/cypress/screenshots
-      - ./cypress/reports/firefox:/cypress-docker/cypress/reports
-      - ./cypress:/cypress-docker/cypress
+      - ./cypress/videos/firefox:/cypress-container/cypress/videos
+      - ./cypress/screenshots/firefox:/cypress-container/cypress/screenshots
+      - ./cypress/reports/firefox:/cypress-container/cypress/reports
+      - ./cypress:/cypress-container/cypress
