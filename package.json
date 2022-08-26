@@ -38,7 +38,6 @@
     "cypress": "^10.6.0",
     "cypress-mochawesome-reporter": "^3.2.2",
     "cypress-multi-reporters": "^1.6.1",
-    "esbuild": "^0.15.5",
     "eslint": "^8.22.0",
     "eslint-plugin-cypress": "^2.12.1",
     "mocha": "^10.0.0",
