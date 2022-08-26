@@ -32,7 +32,7 @@ npm run build:cypress:image-with-tests
 ```
 
 ## Thoughts 
-- Commands over Page Objects
+#### Commands over Page Objects
 I've designed this code around Commands as Page Objects don't reflect user interaction well and can end up creating a bloated code base. By condensing user actions into single purpose commands (i.e. create this thing, or check that item), it minimises the lines of code to maintain and change as the UI changes, while also creating easy to read test code.
 
 
