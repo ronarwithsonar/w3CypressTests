@@ -6,7 +6,7 @@
   "scripts": {
     "build:cypress:image": "docker build -t cypress-container .",
     "build:cypress:image-with-tests": "docker build -t cypress-container-with-tests -f Dockerfile_with_tests .",
-    "build:deploy:test": "npm run build:cypress:image && npm run test:cross-platform && npm run post-test",
+    "build:deploy:test": "npm run build:cypress:image && npm run test:cross-platform && npm run teardown-docker-env && npm run post-test",
     "pre-test": "rm -rf cypress/reports/*",
     "generate-report": "marge cypress/reports/mochareports/combinedReport.json -f report -o cypress/reports/mochareports",
     "combine-reports": "npx mochawesome-merge ./cypress/reports/firefox/mochawesome-report/.jsons/*.json ./cypress/reports/chrome/mochawesome-report/.jsons/*.json -o ./cypress/reports/combinedReport.json",
@@ -18,7 +18,8 @@
     "test": "npm run scripts || npm run post-test",
     "test:chrome:docker": "npm run pre-test && docker-compose run cypress-chrome",
     "test:firefox:docker": "npm run pre-test && docker-compose run cypress-firefox",
-    "test:cross-platform": "npm run pre-test && docker-compose up"
+    "test:cross-platform": "npm run pre-test && docker-compose up",
+    "teardown-docker-env": "docker-compose down -v"
   },
   "repository": {
     "type": "git",

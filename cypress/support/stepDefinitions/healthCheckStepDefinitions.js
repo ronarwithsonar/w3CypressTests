@@ -22,7 +22,3 @@ Then('all links go to a different live page', () => {
         pageHealthCheckCommands.checkThereAreNoBrokenLinks(page);
     });
 })
-
-// After(() => {
-//     pageHealthCheckCommands.checkThereAreNoConsoleErrors();
-// })
