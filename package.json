@@ -4,20 +4,21 @@
   "description": "Cypress Tests for W3 website",
   "main": "index.js",
   "scripts": {
-    "build-cypress-image": "docker build -t cypress-docker .",
-    "build-deploy-test": "npm run build-cypress-image && npm run test:cross-platform && npm run posttest",
+    "build:cypress:image": "docker build -t cypress-container .",
+    "build:cypress:image-with-tests": "docker build -t cypress-container-with-tests -f Dockerfile_with_tests .",
+    "build:deploy:test": "npm run build:cypress:image && npm run test:cross-platform && npm run post-test",
     "pre-test": "rm -rf cypress/reports/*",
-    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "generate-report": "marge cypress/reports/mochareports/combinedReport.json -f report -o cypress/reports/mochareports",
     "combine-reports": "npx mochawesome-merge ./cypress/reports/firefox/mochawesome-report/.jsons/*.json ./cypress/reports/chrome/mochawesome-report/.jsons/*.json -o ./cypress/reports/combinedReport.json",
-    "posttest": "npm run combine-reports && npm run generate-report",
+    "post-test": "npm run combine-reports && npm run generate-report",
     "scripts": "cypress run",
-    "scripts:chrome": "cypress run --browser chrome ",
-    "scripts:firefox": "cypress run --browser firefox ",
-    "test-development": "cypress open",
-    "test": "npm run scripts || npm run posttest",
-    "test:chrome": "npm run pre-test && docker-compose run cypress-chrome",
-    "test:firefox": "npm run pre-test && docker-compose run cypress-firefox",
-    "test:cross-platform": "npm run pre-test && docker-compose up && npm run post-test"
+    "test:chrome": "cypress run --browser chrome ",
+    "test:firefox": "cypress run --browser firefox ",
+    "test-dev": "cypress open",
+    "test": "npm run scripts || npm run post-test",
+    "test:chrome:docker": "npm run pre-test && docker-compose run cypress-chrome",
+    "test:firefox:docker": "npm run pre-test && docker-compose run cypress-firefox",
+    "test:cross-platform": "npm run pre-test && docker-compose up"
   },
   "repository": {
     "type": "git",
@@ -34,13 +35,14 @@
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
     "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
     "cypress": "^10.6.0",
-    "cypress-fail-on-console-error": "^3.2.1",
     "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress-multi-reporters": "^1.6.1",
+    "esbuild": "^0.15.5",
     "eslint": "^8.22.0",
     "eslint-plugin-cypress": "^2.12.1",
-    "mochawesome-merge": "^4.2.1"
-  },
-  "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/support/stepDefinitions.{js,ts}"
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
